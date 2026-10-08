@@ -1,0 +1,39 @@
+DATA QUALITY REPORT
+
+Rows: 6
+Columns: 7
+Missing_Values: 2
+Duplicate_Rows: 1
+Duplicate_Patient_IDs: 1
+Non_Numeric_Ages: 1
+Out_Of_Range_Ages: 2
+Invalid_Dates: 1
+
+COLUMN DATA TYPES
+Patient_ID           object
+Age                  object
+Gender               object
+Blood_Pressure        int64
+Glucose             float64
+Weight              float64
+Appointment_Date     object
+
+MISSING VALUES BY COLUMN
+Patient_ID          0
+Age                 0
+Gender              0
+Blood_Pressure      0
+Glucose             1
+Weight              1
+Appointment_Date    0
+
+INVALID AGE OR DATE RECORDS
+Patient_ID     Age Gender  Blood_Pressure  Glucose  Weight Appointment_Date
+      P002 unknown Female             115     95.0    58.0       2026-10-02
+      P003      -5   Male             125      NaN    70.0       2026-10-03
+      P004     130 Female             118    100.0     NaN       2026-10-04
+      P005      40 Female             122    105.0    62.5     invalid-date
+
+DUPLICATE ROWS (AFTER FIRST OCCURRENCE)
+Patient_ID Age Gender  Blood_Pressure  Glucose  Weight Appointment_Date
+      P001  25   Male             120     90.0    65.5       2026-10-01
